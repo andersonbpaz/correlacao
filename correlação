@@ -1,0 +1,14 @@
+pacman::p_load(corrplot, dplyr, ggplot2)
+str(starwars)
+starwars_selected <- starwars %>% select("height", "mass")
+starwars_selected_na <- na.omit(starwars_selected)
+             
+# correlação
+cor(starwars_selected_na)
+
+# GRÁFICOS DE DISPERSÃO 
+pairs(starwars_selected_na)
+
+# Correlação das variáveis
+starwars_cor <- cor(starwars_selected_na)
+corrplot(starwars_cor, method = "number", order = 'alphabet')
