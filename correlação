@@ -12,3 +12,4 @@ pairs(starwars_selected_na)
 # Correlação das variáveis
 starwars_cor <- cor(starwars_selected_na)
 corrplot(starwars_cor, method = "number", order = 'alphabet')
+corrplot(starwars_cor, order = 'alphabet') 
